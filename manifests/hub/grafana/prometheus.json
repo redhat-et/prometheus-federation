@@ -1,0 +1,16 @@
+{
+    "apiVersion": 1,
+    "datasources": [
+        {
+            "access": "proxy",
+            "basicAuth": false,
+            "withCredentials": false,
+            "editable": false,
+            "name": "thanos-querier",
+            "orgId": 1,
+            "type": "prometheus",
+            "url": "http://thanos-querier.thanos.svc:9090",
+            "version": 1
+        }
+    ]
+}

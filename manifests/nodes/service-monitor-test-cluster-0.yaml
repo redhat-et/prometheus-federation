@@ -12,7 +12,7 @@ spec:
     scrapeTimeout: 30s
     port: web
     relabelings:
-    - replacement: $OCP_VERSION
+    - replacement: v4.5.0-fake-version 
       sourceLabels:
       - __meta_kubernetes_pod_node_name
       targetLabel: ocp_cluster

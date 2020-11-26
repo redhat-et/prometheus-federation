@@ -332,3 +332,7 @@ Before we can run Prometheus, we need to give it the endpoint in the hub cluster
 
    `oc --context test-cluster-1 -n thanos create route reencrypt federated-prometheus --service=prometheus-k8s --port=web-proxy --insecure-policy=Redirect`
 
+## Bask in Glorious Data
+
+That's it! Check back in with your Grafana web GUI.  Navigate to the (only) dashboard and you should see a handful of histogram panels.  Feel free to edit, add, or delete panels - the original dashboard configuration is persisted in the cluster-dashboard ConfigMap.  If you want to revert back to the original config, just hard-refresh grafana (`ctrl-shift-r` on Linux/Windows; `⌘-shift-r` on Mac).
+

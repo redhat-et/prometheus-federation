@@ -1,4 +1,4 @@
-# Caliper
+# Prometheus Federation
 
 
 
@@ -30,9 +30,9 @@ This project consists of 1 central "hub" cluster and 1 or more experiment cluste
 
 ### Setup
 
-The config files under `caliper/manifests/...` are required for deploying this system. Clone this repo to your local environment
+The config files under `prometheus-federation/manifests/...` are required for deploying this system. Clone this repo to your local environment
 
-`$git clone https://github.com/redhat-et/caliper.git`
+`$git clone https://github.com/redhat-et/prometheus-federation.git`
 
 Once the clusters are deployed, I find it helpful to rename the contexts for convenience. E.g.
 `$ oc config rename-context [api-HUB-CLUSTER-NAME:6443] hub`
@@ -55,7 +55,7 @@ Thanos is a modular storage interface for Prometheus - we'll be deploying 3 Than
 
    `$ oc create namespace thanos`
 
-1. Fill in `caliper/manifests/hub/store-s3-secret.yaml`. These will be used by Thano-Receive and Thanos-Store-Gateway to access the backend storage.
+1. Fill in `prometheus-federation/manifests/hub/store-s3-secret.yaml`. These will be used by Thano-Receive and Thanos-Store-Gateway to access the backend storage.
 
    ```
    type: S3
